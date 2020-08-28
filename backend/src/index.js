@@ -6,6 +6,7 @@ server.use(express.json());
 server.use("/task", TaskRouter);
 
 
+
 server.get('/teste', (req, res)=>{
     res.send("Helo Word! Bem vindo ao todo ")
 });
