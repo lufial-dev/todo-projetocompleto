@@ -15,5 +15,6 @@ router.get("/filter/all", MacadrressValidation, TaskController.all);
 router.get("/filter/late", MacadrressValidation, TaskController.late);
 router.get("/filter/today", MacadrressValidation, TaskController.today);
 router.get("/filter/week", MacadrressValidation, TaskController.week);
+router.get("/filter/month", MacadrressValidation, TaskController.month);
 
 module.exports = router;
