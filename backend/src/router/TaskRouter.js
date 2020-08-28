@@ -11,11 +11,11 @@ router.get("/:id", TaskController.show);
 router.delete("/:id", TaskController.delete);
 router.put("/:id/:done", TaskController.done );
 
-router.get("/filter/all", MacadrressValidation, TaskController.all);
-router.get("/filter/late", MacadrressValidation, TaskController.late);
-router.get("/filter/today", MacadrressValidation, TaskController.today);
-router.get("/filter/week", MacadrressValidation, TaskController.week);
-router.get("/filter/month", MacadrressValidation, TaskController.month);
-router.get("/filter/year", MacadrressValidation, TaskController.year);
+router.get("/filter/all/:macaddress", MacadrressValidation, TaskController.all);
+router.get("/filter/late/:macaddress", MacadrressValidation, TaskController.late);
+router.get("/filter/today/:macaddress", MacadrressValidation, TaskController.today);
+router.get("/filter/week/:macaddress", MacadrressValidation, TaskController.week);
+router.get("/filter/month/:macaddress", MacadrressValidation, TaskController.month);
+router.get("/filter/year/:macaddress", MacadrressValidation, TaskController.year);
 
 module.exports = router;

@@ -37,7 +37,7 @@ class TaskController{
     }
 
     async all(req, res){
-        await TaskModel.find({ macaddress : {'$in' : req.body.macaddress }})
+        await TaskModel.find({ macaddress : {'$in' : req.params.macaddress }})
         .sort('when')
         .then( response => {
             return res.status(200).json(response)
@@ -86,7 +86,7 @@ class TaskController{
     async late (req, res) {
         await TaskModel.find({
             when : {"$lt" : current},
-            macaddress : {"$in" : req.body.macaddress}
+            macaddress : {"$in" : req.params.macaddress}
         })
         .then( response => {
             return res.status(200).json(response)
@@ -100,7 +100,7 @@ class TaskController{
         await TaskModel.find({
             when : {"$gte" : startOfDay(current)},
             when : {"$lte" : endOfDay(current)},
-            macaddress : {"$in" : req.body.macaddress}
+            macaddress : {"$in" : req.params.macaddress}
         })
         .then( response => {
             return res.status(200).json(response)
@@ -114,7 +114,7 @@ class TaskController{
         await TaskModel.find({
             when : {"$gte" : startOfWeek(current)},
             when : {"$lte" : endOfWeek(current)},
-            macaddress : {"$in" : req.body.macaddress}
+            macaddress : {"$in" : req.params.macaddress}
         })
         .then( response => {
             return res.status(200).json(response)
@@ -128,7 +128,7 @@ class TaskController{
         await TaskModel.find({
             when : {"$gte" : startOfMonth(current)},
             when : {"$lte" : endOfMonth(current)},
-            macaddress : {"$in" : req.body.macaddress}
+            macaddress : {"$in" : req.params.macaddress}
         })
         .then( response => {
             return res.status(200).json(response)
@@ -142,7 +142,7 @@ class TaskController{
         await TaskModel.find({
             when : {"$gte" : startOfYear(current)},
             when : {"$lte" : endOfYear(current)},
-            macaddress : {"$in" : req.body.macaddress}
+            macaddress : {"$in" : req.params.macaddress}
         })
         .then( response => {
             return res.status(200).json(response)
