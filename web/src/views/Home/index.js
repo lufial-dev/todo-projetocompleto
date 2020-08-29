@@ -1,8 +1,14 @@
 import React from 'react';
 
+import Header from '../components/Header';
+import * as S from './style';
+
 function Home() {
   return (
-      <h1> Hello Word! </h1>
+    <S.Container>
+      <Header />
+    </S.Container>
+      
   );
 }
 
