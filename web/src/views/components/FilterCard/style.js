@@ -13,6 +13,8 @@ export const Container = styled.div`
 
     margin-top: 10px;
     padding: 10px;
+
+    cursor: pointer;
     
     &:hover{
         background: #ee6b26;

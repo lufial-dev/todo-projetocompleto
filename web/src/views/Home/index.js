@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FilterCard from '../components/FilterCard';
+import TaskCard from '../components/TaskCard';
 
 import * as S from './style';
 
@@ -37,6 +38,23 @@ function Home() {
         </button>
 
       </S.FilterArea>
+      <S.Title>
+        <h3>TAREFAS</h3>
+      </S.Title>
+      <S.ContentArea>
+      <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+        <TaskCard />
+      </S.ContentArea>
       <Footer />
     </S.Container>
       
