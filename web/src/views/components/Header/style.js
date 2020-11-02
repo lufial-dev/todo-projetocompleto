@@ -40,6 +40,14 @@ export const RightSide = styled.div`
         }
     }
 
+    button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        focus: none;
+        outline:none;
+    }
+
     #icon-notifications{
         img{
             width: 25px;
