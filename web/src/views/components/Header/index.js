@@ -4,6 +4,7 @@ import * as S from './style';
 import logo from '../../assets/logo.png';
 import bell from '../../assets/icon-bell.png';
 
+
 function Header({ lateCount, clickNotification}){
     return (
             <S.Container>

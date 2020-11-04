@@ -44,7 +44,6 @@ export const RightSide = styled.div`
         background: none;
         border: none;
         cursor: pointer;
-        focus: none;
         outline:none;
     }
 
